@@ -9,5 +9,4 @@ func SetupRoutes(router *mux.Router) {
 	SetupStateRoutes(router)
 	SetupLGRoutes(router)
 	SetupCityRoutes(router)
-	SetupDistrictRoutes(router)
 }

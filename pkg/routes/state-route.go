@@ -6,5 +6,6 @@ import (
 )
 
 func SetupStateRoutes(router *mux.Router) {
-	router.HandleFunc("/countries/{country_id}/states", controllers.GetStates).Methods("GET")
+	router.HandleFunc("/states", controllers.GetStates).Methods("GET")
+	router.HandleFunc("/countries/{country_id}/states", controllers.GetStatesByCountry).Methods("GET")
 }

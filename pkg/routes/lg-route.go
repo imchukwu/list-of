@@ -6,5 +6,6 @@ import (
 )
 
 func SetupLGRoutes(router *mux.Router) {
-	router.HandleFunc("/states/{state_id}/lgs", controllers.GetLGs).Methods("GET")
+	router.HandleFunc("/lgs", controllers.GetLGs).Methods("GET")
+	router.HandleFunc("/states/{state_id}/lgs", controllers.GetLGsByState).Methods("GET")
 }

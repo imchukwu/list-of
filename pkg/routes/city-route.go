@@ -6,5 +6,6 @@ import (
 )
 
 func SetupCityRoutes(router *mux.Router) {
-	router.HandleFunc("/lgs/{lg_id}/cities", controllers.GetCities).Methods("GET")
+	router.HandleFunc("/cities", controllers.GetCities).Methods("GET")
+	router.HandleFunc("/lgs/{lg_id}/cities", controllers.GetCitiesByLGA).Methods("GET")
 }

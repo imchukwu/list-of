@@ -11,8 +11,8 @@ import (
 )
 
 func main() {
-	// router := mux.NewRouter()
 	router := config.SetupApp()
+	
 	// Initialize routes
 	routes.SetupRoutes(router)
 
